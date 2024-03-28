@@ -1,0 +1,5 @@
+npm i chart.js@2.9.4
+
+npm i papaparse
+
+npm i d3-fetch
