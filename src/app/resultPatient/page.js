@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import graphicVisual from "../graphicVisual/page";
+import GraphicVisual from "../graphicVisual/page";
 
 function ResultPatient() {
     // Below this is dummy data
@@ -34,13 +34,13 @@ function ResultPatient() {
     
     
     return (
-        <main className="bg-mediumBlue min-h-screen w-full cursor-default pt-16 text-white">
+        <main className="bg-blue-800 min-h-screen w-full cursor-default pt-16 text-white">
 
-            <h1 className="text-center text-3xl font-extrabold">Result Patient</h1>
+            <h1 className="text-center text-6xl font-extrabold">Result Patient</h1>
 
             <div className="border-0 flex flex-row justify-center text-center w-full h-1/3 px-5 gap-5 mt-14">
                 {/* Personal Information */}
-                <div className="flex flex-col rounded-lg p-3 shadow-xl my-3 border-0 bg-brightBlue/40 h-full w-fit text-left gap-2 text-2xl">
+                <div className="flex flex-col rounded-lg p-3 shadow-xl my-3 border-0 bg-gradient-to-r from-darkBlue to-brightBlue h-full w-fit text-left gap-2 text-2xl">
                     <p><strong>Full Name:</strong> {personalInfo.fullName}</p> 
                     <p><strong>Gender:</strong> {personalInfo.gender}</p>
                     <p><strong>Age:</strong> {personalInfo.age}</p>
@@ -48,18 +48,18 @@ function ResultPatient() {
                 </div>
 
                 {/* Predicted Output */}
-                <div className="bg-brightBlue/40 flex flex-col items-center w-fit min-h-full rounded-lg p-3 shadow-xl my-3 border-0 text-left text-2xl">
+                <div className="bg-gradient-to-l from-darkBlue to-brightBlue flex flex-col items-center w-fit min-h-full rounded-lg p-3 shadow-xl my-3 border-0 text-left text-2xl">
                 {prediction && (
                     <div className="border-0 flex flex-col items-start gap-y-5 w-full h-full text-left">
-                        <p className="text-red-300 font-extrabold"><strong class="text-white">Hospitalization:</strong> {prediction.hospitalized ? "Yes" : "No"}</p>
-                        <p className="text-red-300 font-extrabold"><strong class="text-white">Diagnosis:</strong> {prediction.diagnosis}</p>
-                        <p className="text-red-300 font-extrabold"><strong class="text-white">Confidence:</strong> {Math.round(prediction.confidence * 100)}%</p>
+                        <p className="text-green-400 font-extrabold"><strong class="text-white">Hospitalization:</strong> {prediction.hospitalized ? "Yes" : "No"}</p>
+                        <p className="text-red-400 font-extrabold"><strong class="text-white">Diagnosis:</strong> {prediction.diagnosis}</p>
+                        <p className="font-extrabold"><strong class="text-white">Confidence:</strong> {Math.round(prediction.confidence * 100)}%</p>
                     </div>
                 )}
                 </div>
             </div>
 
-            <graphicVisual />
+            <GraphicVisual />
 
 
 

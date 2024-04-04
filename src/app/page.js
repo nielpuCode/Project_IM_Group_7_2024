@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation'
-import resultPatient from './resultPatient/page';
+import ResultPatient from './resultPatient/page';
 
 function Home() {
     const router = useRouter()
@@ -49,12 +49,12 @@ function Home() {
     }
 
     return (
-        <main className="bg-mediumBlue min-h-screen w-full cursor-default">
+        <main className="bg-blue-800 min-h-screen w-full cursor-default">
             {/* <button onClick={tryMove} className="bg-darkBlue hover:bg-darkBlue/50 text-white px-4 py-2 rounded-xl block mx-auto font-extrabold">MOVE</button> */}
             <div className="flex flex-col mx-auto p-4">
-                <h1 className="text-4xl font-extrabold text-center text-white mb-4">Medical Information Form</h1>
-                <form onSubmit={handleSubmit} className="bg-brightBlue/40 flex flex-col shadow-md rounded-xl pt-6 pb-8 mb-4 flex-wrap">
-                    <div className='border-0 w-full flex flex-row items-center justify-center gap-2 md:gap-4 flex-wrap'>
+                <h1 className="text-5xl font-extrabold text-center text-white my-11">Medical Information Form</h1>
+                <form onSubmit={handleSubmit} className="bg-gradient-to-b from-darkBlue via-mediumBlue to-white flex flex-col shadow-md rounded-xl pt-6 pb-8 mb-4 flex-wrap border-0 w-[65%] mx-auto ">
+                    <div className='border-0 w-full flex flex-row items-center justify-around gap-2 md:gap-4 flex-wrap'>
                         <div className="mb-6 flex flex-col border-0 text-center w-2/5 px-5">
                             <h2 className="text-3xl font-extrabold mb-2 text-white">Personal Information</h2>
                             <input className="rounded-lg p-3 shadow-xl my-3 border-0 border-gray-400 w-full" type="text" name="fullName" placeholder="Full Name" value={personalInfo.fullName} onChange={handlePersonalInfoChange} required />
@@ -76,7 +76,7 @@ function Home() {
                         </div>
                     </div>
 
-                    <button onClick={tryMove} className="bg-darkBlue hover:bg-darkBlue/50 text-white px-4 py-2 rounded-xl mt-4 block mx-auto font-extrabold">Submit</button>
+                    <button onClick={tryMove} className="bg-darkBlue hover:bg-darkBlue/80 text-white px-4 py-2 rounded-xl mt-4 block mx-auto font-extrabold text-3xl">Submit</button>
                 </form>
             </div>
         </main>
